@@ -1,45 +1,12 @@
-// // 1. In một bảng số từ 1-100 thỏa mãn điều kiện: (gợi ý dùng 2 vòng for lồng
-// //     nhau, để ý chỗ bước nhảy)
-// //     • Bảng số gồm 10 hàng và 10 cột
-// //     • Các giá trị trong hàng là liên tiếp nhau
-// //     • Các giá trị trong cột hơn kém nhau 10
-
-// var printSquare = function() {
-//     var content = "";
-//     var count = 0;
-//     for (var k = 1; k <= 10; k++) {
-//         for (var i = 1; i <= 10; i++) {
-//             count++;
-//             content += count + " ";
-//         }
-//         content += "\n";
-//     }
-//     console.log(content);
-// }
-
-// printSquare();
-
-// // 2. Viết function nhận vào tham số là một mảng số nguyên,tìm và in ra các số
-// // nguyên tố trong mảng
-
-// var primeCheck = function(n) {
-//     if (n < 2)
-//         return false;
-//     for (var i = 2; i <= Math.sqrt(n); i++) {
-//         if (n % i === 0) {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
 var tinhLuong = function () {
   var soNgay = document.getElementById("ngay").value;
   soNgay = parseFloat(soNgay);
 
   var luong;
   luong = soNgay * 100000;
-  console.log("tiền lương là:", luong);
+  // console.log("tiền lương là:", luong);
+  let result = document.getElementById("result1");
+  result.innerHTML = `Tiền lương của bạn là ${luong}`;
 };
 // tinhLuong();
 
@@ -54,16 +21,19 @@ var tinhTB = function () {
   num3 = parseFloat(num3);
   num4 = parseFloat(num4);
   num5 = parseFloat(num5);
-
-  var tinhTB = (num1 + num2 + num3 + num4 + num5) / 5;
-  console.log("Tinh tb", tinhTB);
+  let result = document.getElementById("result2");
+  var tinhTB = parseInt((num1 + num2 + num3 + num4 + num5) / 5);
+  // console.log("Tinh tb", tinhTB);
+  result.innerHTML = `Trung bình của 5 số là ${tinhTB}`;
 };
 
 var doiTien = function () {
   var tienUSD = document.getElementById("tienUSD").value;
   tienUSD = parseFloat(tienUSD);
   var tienViet = tienUSD * 23500;
-  console.log("tiền Việt là:", tienViet);
+  let result = document.getElementById("result3");
+  // console.log("tiền Việt là:", tienViet);
+  result.innerHTML = `Tiền việt của bạn là ${tienViet}`;
 };
 
 var tinhDientichVaChuVi = function () {
@@ -73,8 +43,10 @@ var tinhDientichVaChuVi = function () {
   rong = parseFloat(rong);
   var dienTich = dai * rong;
   var chuVi = (dai + rong) * 2;
-  console.log("diện tích là:", dienTich);
-  console.log("chu vi là", chuVi);
+  let result = document.getElementById("result4");
+  result.innerHTML = `Diện tích là ${dienTich}-Chu vi là ${chuVi}`;
+  // console.log("diện tích là:", dienTich);
+  // console.log("chu vi là", chuVi);
 };
 
 var tinhTong2So = function () {
@@ -87,5 +59,7 @@ var tinhTong2So = function () {
   sochuc = parseInt(sochuc);
   console.log(soDV);
   var tong = soDV + sochuc;
-  console.log("tổng 2 số là", tong);
+  // console.log("tổng 2 số là", tong);
+  let result = document.getElementById("result5");
+  result.innerHTML = `Tổng của hàng chục và đơn vị là ${tong}`;
 };
